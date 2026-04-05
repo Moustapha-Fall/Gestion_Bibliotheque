@@ -1,0 +1,11 @@
+# Fichiers compiles Java
+*.class
+
+# Base de donnees SQLite locale
+*.db
+
+# Script de lancement local
+run.sh
+
+# Dossier de build
+target/
