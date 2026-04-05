@@ -89,4 +89,9 @@ Le `main` simule automatiquement :
 
 ---
 
+Collaborateurs
+https://github.com/Hissein8 (Hissein Mahamat Issa)
+https://github.com/sg5324127-oss (Pape Souleye Gassam)
+https://github.com/K4izen404 (Mamadou Dia)
+
 *ESP Dakar — 2025/2026*
