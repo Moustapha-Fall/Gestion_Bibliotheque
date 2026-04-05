@@ -24,9 +24,7 @@ public class Vehicule {
         return immatriculation;
     }
 
-    public String getModele() {
-        return modele;
-    }
+    public String getModele() { return modele; }
 
     public String getMarque() {
         return marque;
