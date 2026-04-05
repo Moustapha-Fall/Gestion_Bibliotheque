@@ -2,6 +2,20 @@ CREATE DATABASE IF NOT EXISTS bibliotheque;
 USE bibliotheque;
 
 -- ----------------------------------------------------------
+-- Table : bibliothecaires
+-- Personne est abstraite donc pas de table propre
+-- Bibliothecaire herite de Personne : email, nom, prenom, adresse + matricule
+-- ----------------------------------------------------------
+CREATE TABLE IF NOT EXISTS bibliothecaires (
+    id        INT PRIMARY KEY AUTO_INCREMENT,
+    email     VARCHAR(255),
+    nom       VARCHAR(255),
+    prenom    VARCHAR(255),
+    adresse   VARCHAR(255),
+    matricule VARCHAR(50) UNIQUE
+);
+
+-- ----------------------------------------------------------
 -- Table : membres
 -- ----------------------------------------------------------
 CREATE TABLE IF NOT EXISTS membres (

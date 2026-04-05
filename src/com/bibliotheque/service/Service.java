@@ -26,6 +26,17 @@ public class Service {
         try {
             Statement stmt = conn.createStatement();
 
+            // table bibliothecaires
+            // (Personne est abstraite : ses champs sont repris dans chaque sous-table)
+            stmt.execute(
+                    "CREATE TABLE IF NOT EXISTS bibliothecaires (" +
+                            "id INT PRIMARY KEY AUTO_INCREMENT," +
+                            "email VARCHAR(255)," +
+                            "nom VARCHAR(255)," +
+                            "prenom VARCHAR(255)," +
+                            "adresse VARCHAR(255)," +
+                            "matricule VARCHAR(50) UNIQUE)");
+
             // table membres
             stmt.execute(
                     "CREATE TABLE IF NOT EXISTS membres (" +

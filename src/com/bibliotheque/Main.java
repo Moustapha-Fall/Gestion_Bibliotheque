@@ -63,8 +63,22 @@ public class Main {
         // SCENARIO COMPLET
         static void simulerScenario() throws Exception {
 
+                // ETAPE 0 : Enregistrement du bibliothecaire
+
+                titre("ETAPE 0 : ENREGISTREMENT DU BIBLIOTHECAIRE");
+                System.out.println("\nAppuyez sur Entree pour continuer...");
+                scanner.nextLine();
+
+                action("Ajout du bibliothecaire responsable du systeme");
+                BibliothecaireService.ajouterBibliothecaire(conn, new Bibliothecaire(
+                    "amadou.fall@bibliotheque.sn", "Fall", "Amadou",
+                    "Bibliotheque Centrale, Dakar", "BIB-2024-001"));
+
+                etat("Bibliothecaires enregistres :");
+                BibliothecaireService.listerBibliothecaires(conn);
+
                 // ETAPE 1 : Creation des annexes
-        
+
                 titre("ETAPE 1 : CREATION DES ANNEXES");
                 System.out.println("\nAppuyez sur Entree pour continuer...");
                 scanner.nextLine();
@@ -375,6 +389,7 @@ public class Main {
                 stmt.execute("DELETE FROM ouvrages");
                 stmt.execute("DELETE FROM membres");
                 stmt.execute("DELETE FROM annexes");
+                stmt.execute("DELETE FROM bibliothecaires");
                 stmt.execute("UPDATE caisse SET solde = 0 WHERE id = 1");
 
                 // reinitialiser les compteurs AUTO_INCREMENT (MySQL)
@@ -386,6 +401,7 @@ public class Main {
                 stmt.execute("ALTER TABLE ouvrages AUTO_INCREMENT = 1");
                 stmt.execute("ALTER TABLE membres AUTO_INCREMENT = 1");
                 stmt.execute("ALTER TABLE annexes AUTO_INCREMENT = 1");
+                stmt.execute("ALTER TABLE bibliothecaires AUTO_INCREMENT = 1");
 
                 stmt.close();
                 System.out.println("  Base de donnees reinitalisee — simulation en cours...");
