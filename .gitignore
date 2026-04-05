@@ -7,5 +7,7 @@
 # Script de lancement local
 run.sh
 
-# Dossier de build
+# Dossiers de build
 target/
+com/
+out/
